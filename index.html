@@ -10,36 +10,36 @@
     <title>Document</title>
 </head>
 <body>
-    <form class="form-register">
+    <form id="form1" class="form-register-style">
         <h1>Registro</h1>
         <div class="content-input">
             <div class="container-input">
                 <div class="entryarea">
-                    <input type="text" required>
+                    <input name="full_name" type="text" id="input-full-name" required>
                     <div class="label-input">Enter your full name</div>
                 </div>
             </div>
             <div class="container-input">
                 <div class="entryarea">
-                    <input type="text" required>
+                    <input name="email" type="email" id="input-email" required>
                     <div class="label-input">Enter your email</div>
                 </div>
             </div>
             <div class="container-input">
                 <div class="entryarea">
-                    <input type="text" required>
+                    <input name="passd" type="password" id="input-passd" required>
                     <div class="label-input">Enter your password</div>
                 </div>
             </div>
             <div class="container-input">
                 <div class="entryarea">
-                    <input type="text" required>
+                    <input name="conf_passd" type="password" id="input-conf-passd" required>
                     <div class="label-input">Confirm your password</div>
                 </div>
             </div>
             <div class="container-input">
                 <div class="entryarea">
-                    <input type="text" required>
+                    <input name="phone" type="number" id="input-phone" required>
                     <div class="label-input">Enter your phone</div>
                 </div>
             </div>
@@ -64,32 +64,62 @@
             </span>
         </button>
     </form>
-    <form class="form-box-check">
+    <form id="form2" class="form-box-check">
         <h1>Género favorito?</h1>
         <div class="content-input-check">
             <div class="container-input-check">
                 <label>Ficción</label>
-                <input type="checkbox" class="checkbox">
+                <input 
+                    type="checkbox" 
+                    id="input-check-ficcion" 
+                    class="checkbox"
+                    name="genero"
+                    value="ficcion">
             </div>
             <div class="container-input-check">
                 <label>No-Ficción</label>
-                <input type="checkbox" class="checkbox">
+                <input 
+                    type="checkbox" 
+                    id="input-check-no-ficcion" 
+                    class="checkbox"
+                    name="genero"
+                    value="no-ficcion">
             </div>
             <div class="container-input-check">
                 <label>Misterio</label>
-                <input type="checkbox" class="checkbox">
+                <input 
+                    type="checkbox" 
+                    id="input-check-misterio" 
+                    class="checkbox"
+                    name="genero"
+                    value="misterio">
             </div>
             <div class="container-input-check">
                 <label>Terror</label>
-                <input type="checkbox" class="checkbox">
+                <input 
+                    type="checkbox" 
+                    id="input-check-terror" 
+                    class="checkbox"
+                    name="genero"
+                    value="terror">
             </div>
             <div class="container-input-check">
                 <label>Suspenso</label>
-                <input type="checkbox" class="checkbox">
+                <input 
+                    type="checkbox" 
+                    id="input-check-suspenso" 
+                    class="checkbox"
+                    name="genero"
+                    value="suspenso">
             </div>
             <div class="container-input-check">
                 <label>Historia</label>
-                <input type="checkbox" class="checkbox">
+                <input 
+                    type="checkbox" 
+                    id="input-check-historia" 
+                    class="checkbox"
+                    name="genero"
+                    value="historia">
             </div>
         </div>
         <button type="submit" id="btn-submit" class="btn-submit-style">submit</button>
