@@ -34,9 +34,9 @@ btn_submit.addEventListener('click', (event) => {
         generos: dataCheck.getAll("genero")
     };
 
-    for(let key in datos) {
-        console.log(key, datos[key])
-    }
+    // for(let key in datos) {
+    //     console.log(key, datos[key])
+    // }
 
 })
 
