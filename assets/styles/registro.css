@@ -36,11 +36,13 @@ body {
 }
 
 .content-message {
-    width: auto;
-    height: 3rem;
+    width: calc(20rem - .6rem);
+    min-height: 2.5rem;
+    height: auto;
     background-color: rgb(224, 0, 0);
+    font-size: .75rem;
     color: white;
-    border-radius: .3rem;
+    border-radius: .18rem;
     padding: 0 .3rem 0 .3rem;
     display: none;
     justify-content: flex-start;

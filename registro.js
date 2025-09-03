@@ -8,7 +8,7 @@ const input_email = document.getElementById('input-email');
 const input_passd = document.getElementById('input-passd');
 const input_conf_passd = document.getElementById('input-conf-passd');
 const content_message = document.querySelector('.content-message');
-const message = form_register_style.querySelector("p");
+const message = form_register_style.querySelector(".content-message p");
 
 btn_next.addEventListener('click', () => {
     
@@ -60,9 +60,10 @@ const form1 = document.getElementById('form1');
 const form2 = document.getElementById('form2');
 
 
-btn_submit.addEventListener('click', () => {
+btn_submit.addEventListener('click', (e) => {
     const obj1 = Object.fromEntries(new FormData(form1));
     const dataCheck = new FormData(form2);
+    e.preventDefault();
 
     let user = {
         first_name: obj1.first_name,
