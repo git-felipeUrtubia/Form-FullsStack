@@ -35,6 +35,27 @@ body {
     color: white;
 }
 
+.content-message {
+    width: auto;
+    height: 3rem;
+    background-color: rgb(224, 0, 0);
+    color: white;
+    border-radius: .3rem;
+    padding: 0 .3rem 0 .3rem;
+    display: none;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+}
+
+.content-message a {
+    color: rgb(228, 228, 228);
+}
+
+.content-message a:active {
+    color: rgb(175, 175, 175);
+}
+
 .content-input {
     width: 27rem;
     height: 22rem;
