@@ -39,11 +39,14 @@ btn_next.addEventListener('click', () => {
         '* Asegúrate de escribir un correo valido. Ejemplo: <a href="#" >nombre@ejemplo.com</a>';
 
     }else if(passd_1.length < 8) {
+
         content_message.style.display = "flex";
         message.textContent = "* La contraseña debe tener minimo 8 caracteres.";
     }else if(passd_1 !== passd_2) {
+        
         content_message.style.display = "flex";
         message.textContent = "* Las contraseñas no coinciden. Por favor, inténtalo de nuevo.";
+    
     }else {
 
         form_register_style.style.transform = 'translateY(-120vh)';
@@ -57,13 +60,11 @@ const form1 = document.getElementById('form1');
 const form2 = document.getElementById('form2');
 
 
-btn_submit.addEventListener('click', (event) => {
-    event.preventDefault();
-
+btn_submit.addEventListener('click', () => {
     const obj1 = Object.fromEntries(new FormData(form1));
     const dataCheck = new FormData(form2);
 
-    let datos = {
+    let user = {
         first_name: obj1.first_name,
         last_name: obj1.last_name,
         email: obj1.email,
@@ -73,11 +74,22 @@ btn_submit.addEventListener('click', (event) => {
         generos: dataCheck.getAll("genero")
     };
 
-    for(let key in datos) {
-        console.log(key, datos[key])
-    }
+    alert(`Usuario guardado: 
+        first name: ${user["first_name"]}
+        last name: ${user["last_name"]}
+        email: ${user["email"]}
+        contraseña: ${user["passd"]}
+        confirmar contraseña: ${user["conf_passd"]}
+        phone: ${user["phone"]}
+        generos: ${user["generos"]}`)
+
+    let users = JSON.parse(localStorage.getItem("users")) || [];
+    users.push(user);
+    localStorage.setItem("users", JSON.stringify(users));
 
 })
+
+
 
 
 
