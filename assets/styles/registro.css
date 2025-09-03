@@ -12,7 +12,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: url("./assets/img/image-gamer.jpg") no-repeat center;
+    background: url("../img/image-gamer.jpg") no-repeat center;
     background-size: cover;
     overflow-y: hidden;
     position: relative;
