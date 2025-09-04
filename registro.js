@@ -29,7 +29,7 @@ btn_next.addEventListener('click', () => {
     if (vacio) {
 
         content_message.style.display = "flex";
-        message.textContent = "* inputs vacios";
+        message.textContent = "* Parece que dejaste algunos campos vacíos. Completa todos para continuar.";
 
     }else if(!format_email.test(email_check)) {
 
@@ -38,14 +38,14 @@ btn_next.addEventListener('click', () => {
         message.innerHTML = 
         '* Asegúrate de escribir un correo valido. Ejemplo: <a href="#" >nombre@ejemplo.com</a>';
 
-    }else if(passd_1.length < 3) {
+    }else if(passd_1 !== passd_2 ) {
 
         content_message.style.display = "flex";
-        message.textContent = "* La contraseña debe tener minimo 8 caracteres.";
-    }else if(passd_1 !== passd_2) {
+        message.textContent = "* Las contraseñas no coinciden. Por favor, inténtalo de nuevo.";
+    }else if(passd_1.length < 8) {
         
         content_message.style.display = "flex";
-        message.textContent = "* Las contraseñas no coinciden. Por favor, inténtalo de nuevo.";
+        message.textContent = "* La contraseña debe tener minimo 8 caracteres.";
     
     }else {
 
