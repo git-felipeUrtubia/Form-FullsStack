@@ -17,34 +17,43 @@ btn_submit.addEventListener('click', (event) => {
     }
 
     let users = JSON.parse(localStorage.getItem("users"));
+
+    if(users == null) {
+        content_message_login.style.display = "flex";
+        content_message_login.style.backgroundColor = "red"
+        message_login.textContent = "* Usuario no registrado."
+    }
+
     for(let i=0; i < users.length; i++) {
         if(
             users[i].email == data["email_login"] &&
             users[i].passd == data["passd_login"]
         ) {
             login = true;
+            break;
         }else {
             login = false;
         }
     }
-
-
     if(vacio) {
         content_message_login.style.display = "flex";
-        content_message_login.style.backgroundColor = "red"
-        message_login.textContent = "* Debes llenar todos los campos."
+        content_message_login.style.backgroundColor = "red";
+        message_login.textContent = "* Debes llenar todos los campos.";
+
     }else if(login == false) {
         content_message_login.style.display = "flex";
-        content_message_login.style.backgroundColor = "red"
+        content_message_login.style.backgroundColor = "red";
         message_login.innerHTML = 
-            '* No existe un usuario con ese correo. <a href="./registro.html">¿Quieres registrarte?</a>'
+            '* No existe un usuario con ese correo. <a href="./registro.html">¿Quieres registrarte?</a>';
+
     }else {
         content_message_login.style.display = "flex";
-        content_message_login.style.backgroundColor = "green"
+        content_message_login.style.backgroundColor = "green";
         message_login.textContent = "Inicio de sesión exitoso. ¡Bienvenido!";
+
     }
 
-})
+});
 
 
 

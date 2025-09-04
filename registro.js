@@ -38,7 +38,7 @@ btn_next.addEventListener('click', () => {
         message.innerHTML = 
         '* Asegúrate de escribir un correo valido. Ejemplo: <a href="#" >nombre@ejemplo.com</a>';
 
-    }else if(passd_1.length < 8) {
+    }else if(passd_1.length < 3) {
 
         content_message.style.display = "flex";
         message.textContent = "* La contraseña debe tener minimo 8 caracteres.";
@@ -75,19 +75,19 @@ btn_submit.addEventListener('click', (e) => {
         generos: dataCheck.getAll("genero")
     };
 
-    alert(`Usuario guardado: 
-        first name: ${user["first_name"]}
-        last name: ${user["last_name"]}
-        email: ${user["email"]}
-        contraseña: ${user["passd"]}
-        confirmar contraseña: ${user["conf_passd"]}
-        phone: ${user["phone"]}
-        generos: ${user["generos"]}`)
+    // alert(`Usuario guardado: 
+    //     first name: ${user["first_name"]}
+    //     last name: ${user["last_name"]}
+    //     email: ${user["email"]}
+    //     contraseña: ${user["passd"]}
+    //     confirmar contraseña: ${user["conf_passd"]}
+    //     phone: ${user["phone"]}
+    //     generos: ${user["generos"]}`)
 
     let users = JSON.parse(localStorage.getItem("users")) || [];
     users.push(user);
     localStorage.setItem("users", JSON.stringify(users));
-
+    window.location.href = 'http://127.0.0.1:5500/views/login.html';
 })
 
 
